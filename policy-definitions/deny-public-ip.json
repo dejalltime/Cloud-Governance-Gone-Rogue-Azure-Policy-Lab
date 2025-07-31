@@ -7,30 +7,16 @@
       "metadata": {
         "category": "Security",
         "createdBy": "d20d29cc-27a2-457e-b7d7-07a65481949e",
-        "createdOn": "2025-07-31T12:56:10.2556684Z",
+        "createdOn": "2025-07-31T14:35:29.4110932Z",
         "updatedBy": null,
         "updatedOn": null
       },
       "version": "1.0.0",
-      "parameters": {
-        "allowedLocations": {
-          "type": "Array",
-          "metadata": {
-            "displayName": "Allowed locations",
-            "description": "The list of allowed locations for resources.",
-            "strongType": "location"
-          },
-          "defaultValue": [
-            "canadacentral"
-          ]
-        }
-      },
+      "parameters": {},
       "policyRule": {
         "if": {
-          "not": {
-            "field": "location",
-            "in": "[parameters('allowedLocations')]"
-          }
+          "field": "type",
+          "equals": "Microsoft.Network/publicIPAddresses"
         },
         "then": {
           "effect": "deny"
@@ -40,15 +26,15 @@
         "1.0.0"
       ]
     },
-    "id": "/subscriptions/b3d019b0-c6fd-4f25-ac45-54f25745f266/providers/Microsoft.Authorization/policyDefinitions/16937629-dbc7-450e-b7fb-fe321fb51127",
+    "id": "/subscriptions/b3d019b0-c6fd-4f25-ac45-54f25745f266/providers/Microsoft.Authorization/policyDefinitions/74fdd989-2cc0-4aea-8d85-9480947c790b",
     "type": "Microsoft.Authorization/policyDefinitions",
-    "name": "16937629-dbc7-450e-b7fb-fe321fb51127",
+    "name": "74fdd989-2cc0-4aea-8d85-9480947c790b",
     "systemData": {
       "createdBy": "mart1449@algonquinlive.com",
       "createdByType": "User",
-      "createdAt": "2025-07-31T12:56:10.2457657Z",
+      "createdAt": "2025-07-31T14:35:29.3710293Z",
       "lastModifiedBy": "mart1449@algonquinlive.com",
       "lastModifiedByType": "User",
-      "lastModifiedAt": "2025-07-31T12:56:10.2457657Z"
+      "lastModifiedAt": "2025-07-31T14:35:29.3710293Z"
     }
   }
