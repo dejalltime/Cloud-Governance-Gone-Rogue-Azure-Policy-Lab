@@ -19,4 +19,4 @@ In this lab, we enforced three custom Azure Policies—region lockdown, mandator
 - Understanding Azure’s “effect”: `deny` vs. `audit`.
 
 ## Demo Video
-[Watch the 10-minute policy demo](https://youtu.be/YourLinkHere)
+[Watch the 10-minute policy demo](https://youtu.be/uVqU23mzkys)
