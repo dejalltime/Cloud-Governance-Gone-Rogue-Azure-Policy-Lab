@@ -1,0 +1,49 @@
+{
+    "properties": {
+      "displayName": "Require-ProjectName-Tag",
+      "policyType": "Custom",
+      "mode": "All",
+      "description": "Require all resources to include a ProjectName tag.",
+      "metadata": {
+        "category": "Compliance",
+        "createdBy": "d20d29cc-27a2-457e-b7d7-07a65481949e",
+        "createdOn": "2025-07-31T12:50:29.9270654Z",
+        "updatedBy": null,
+        "updatedOn": null
+      },
+      "version": "1.0.0",
+      "parameters": {
+        "tagName": {
+          "type": "String",
+          "metadata": {
+            "displayName": "Required tag name",
+            "description": "The name of the tag that must be applied to all resources."
+          },
+          "defaultValue": "ProjectName"
+        }
+      },
+      "policyRule": {
+        "if": {
+          "field": "[concat('tags[', parameters('tagName'), ']')]",
+          "exists": false
+        },
+        "then": {
+          "effect": "deny"
+        }
+      },
+      "versions": [
+        "1.0.0"
+      ]
+    },
+    "id": "/subscriptions/b3d019b0-c6fd-4f25-ac45-54f25745f266/providers/Microsoft.Authorization/policyDefinitions/be7c5e16-a1ea-4406-b2d1-d2a45187863e",
+    "type": "Microsoft.Authorization/policyDefinitions",
+    "name": "be7c5e16-a1ea-4406-b2d1-d2a45187863e",
+    "systemData": {
+      "createdBy": "mart1449@algonquinlive.com",
+      "createdByType": "User",
+      "createdAt": "2025-07-31T12:50:29.9165417Z",
+      "lastModifiedBy": "mart1449@algonquinlive.com",
+      "lastModifiedByType": "User",
+      "lastModifiedAt": "2025-07-31T12:50:29.9165417Z"
+    }
+  }

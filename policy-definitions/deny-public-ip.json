@@ -1,0 +1,54 @@
+{
+    "properties": {
+      "displayName": "Deny-Public-IP",
+      "policyType": "Custom",
+      "mode": "All",
+      "description": "Prevent creation of Public IP addresses.",
+      "metadata": {
+        "category": "Security",
+        "createdBy": "d20d29cc-27a2-457e-b7d7-07a65481949e",
+        "createdOn": "2025-07-31T12:56:10.2556684Z",
+        "updatedBy": null,
+        "updatedOn": null
+      },
+      "version": "1.0.0",
+      "parameters": {
+        "allowedLocations": {
+          "type": "Array",
+          "metadata": {
+            "displayName": "Allowed locations",
+            "description": "The list of allowed locations for resources.",
+            "strongType": "location"
+          },
+          "defaultValue": [
+            "canadacentral"
+          ]
+        }
+      },
+      "policyRule": {
+        "if": {
+          "not": {
+            "field": "location",
+            "in": "[parameters('allowedLocations')]"
+          }
+        },
+        "then": {
+          "effect": "deny"
+        }
+      },
+      "versions": [
+        "1.0.0"
+      ]
+    },
+    "id": "/subscriptions/b3d019b0-c6fd-4f25-ac45-54f25745f266/providers/Microsoft.Authorization/policyDefinitions/16937629-dbc7-450e-b7fb-fe321fb51127",
+    "type": "Microsoft.Authorization/policyDefinitions",
+    "name": "16937629-dbc7-450e-b7fb-fe321fb51127",
+    "systemData": {
+      "createdBy": "mart1449@algonquinlive.com",
+      "createdByType": "User",
+      "createdAt": "2025-07-31T12:56:10.2457657Z",
+      "lastModifiedBy": "mart1449@algonquinlive.com",
+      "lastModifiedByType": "User",
+      "lastModifiedAt": "2025-07-31T12:56:10.2457657Z"
+    }
+  }
